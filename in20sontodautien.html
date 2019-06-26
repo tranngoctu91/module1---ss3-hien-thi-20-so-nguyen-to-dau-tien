@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in20sontodautien</title>
+</head>
+<body>
+
+<script>
+    let count = 0;
+    let i = 0;
+    while (count < 20) {
+        if (checkprime(i) == true) {
+            document.write(i + " là số nguyên tố thứ " + parseInt(count +1));
+            document.write("<br>");
+            count++;
+            i++;
+        } else {
+            i++;
+        }
+    }
+
+    function checkprime(n) {
+        let check = true;
+        if (n < 2) {
+            check = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    check = false;
+                    break
+                } else {
+                    check = true;
+                }
+
+            }
+        }
+        return check;
+    }
+
+
+</script>
+</body>
+</html>
